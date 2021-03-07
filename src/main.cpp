@@ -66,6 +66,7 @@ int main(int argc, char *argv[]) {
         int old_precision = std::cout.precision();
         std::cout.precision(2);
         std::cout << "----------------" << std::endl;
+        std::cout << "Dataset: " << options.dataset << std::endl;
         std::cout << "CSR mean execution time=" << mean<long, float>(times1.data(), times1.size()) / 1000 << "±" << st_dev<long, float>(times1.data(), times1.size()) / 1000 << " ms" << std::endl;
         std::cout << "COO mean execution time=" << mean<long, float>(times2.data(), times2.size()) / 1000 << "±" << st_dev<long, float>(times2.data(), times2.size()) / 1000 << " ms" << std::endl;
         std::cout << "----------------" << std::endl;
